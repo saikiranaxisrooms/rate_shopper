@@ -8,4 +8,6 @@ class Hotel(Document):
     hotel_id = StringField()
     name = StringField()
     country = StringField()
+    city = StringField()
+    state = StringField()
     date_created = DateTimeField(default=datetime.datetime.now())
