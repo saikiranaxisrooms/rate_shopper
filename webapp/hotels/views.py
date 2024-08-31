@@ -52,10 +52,3 @@ class HotelList(APIView):
         except requests.exceptions.RequestException as e:
             return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-
-
-
-
-        Hotel(hotel_id=hotel_id, name=name, country=country).save()
-        return Response("success", status=status.HTTP_200_OK)
-
